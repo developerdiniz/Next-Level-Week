@@ -1,14 +1,28 @@
 /* BOX MODEL:
     Toda caixa tem : largura, altura, espaçamento, preenchimento, bordas, cor, fundo, maneira que é vista pelo html(display), alinhamento, posicionamento
 */
+/*:root = criar uma variavel que pode ser repetidas e replicadas na nossa pagina*/
+:root{
+    /*criamos essa variavel e agora é só replicar*/
+    --title-color: #322153;
+
+}
 html {
+    /*Mudar as fontes da pagina toda*/
     font-family: 'Roboto Slab', serif;
 }
 body{
+    /*Mudar a cor do corpo da pagina*/
     background: #f0f0f5;
+}
+a{
+    /*Tirar o sublinhando dos links*/
+    text-decoration: none;
 }
 /*Colocar o header num unico bloco, temos as opções flex, inline, block que são as mais usadas.*/
 #page-home header {
+    /*acrescentar uma margem para não ficar muito colado no topo da pagina*/
+    margin-top: 48px;
     display: flex;
     /*alinhar os items que estão nesse bloco*/
     align-items: center;
@@ -24,7 +38,43 @@ body{
 }
 
 #page-home {
+    /*Acrescentar uma imagem*/
     background: url('../assets/home-background.svg') no-repeat;
+    /*Posicionar ela */
     background-position: 35vw bottom;
+    /*definir o tamanho dela*/
     height: 100vh;
+}
+
+#page-home header a span {
+    /*adicionar a imagem*/
+    background-image: url(../assets/log-in.svg);
+    /*Precisa colcoar um tamanho*/
+    width: 20px;
+    height: 20px;
+    /*Para a imagem aparecer, precisamos modificar o tipo de display*/
+    display: flex;
+    /*E para separar um pouco as imagens*/
+    margin-right: 16px;
+}
+
+#page-home header a{
+    /*com a modificação no "#page-home header a span" nosso display perdeu a configuração, com isso temos que mudar novamente*/
+    display: flex;
+    /*Trocar a cor do texto*/
+    color: var(--title-color);
+    /*Colocar o texto em negrito*/
+    font-weight: 700;
+}
+
+#page-home main {
+    /*Definir uma largura maxima*/
+    max-width: 560px;
+
+}
+#page-home main h1 {
+    /*Mudar a fonte*/
+    font-size: 54px;
+    /*Usando a cor criada no :root*/
+    color: var(--title-color);
 }

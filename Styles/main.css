@@ -1,23 +1,30 @@
 /* BOX MODEL:
     Toda caixa tem : largura, altura, espaçamento, preenchimento, bordas, cor, fundo, maneira que é vista pelo html(display), alinhamento, posicionamento
 */
-
-body {
+html {
     font-family: 'Roboto Slab', serif;
 }
+body{
+    background: #f0f0f5;
+}
 /*Colocar o header num unico bloco, temos as opções flex, inline, block que são as mais usadas.*/
-header {
+#page-home header {
     display: flex;
     /*alinhar os items que estão nesse bloco*/
     align-items: center;
     /*Justificar os items: colocar um item na ponta direita e outra na esquerda*/
     justify-content: space-between;
 }
-.content {
-    background-color: chartreuse;
+#page-home .content {
     /*Definindo quantos 90% será nosso bloco*/
     width: 90%;
     max-width: 1100px;
     /*definindo a margin. podemos passar como paramentro o top, right, bottom e left*/
     margin: 0 auto;
+}
+
+#page-home {
+    background: url('../assets/home-background.svg') no-repeat;
+    background-position: 35vw bottom;
+    height: 100vh;
 }

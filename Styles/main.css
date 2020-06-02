@@ -75,6 +75,11 @@ a{
 #page-home main h1 {
     /*Mudar a fonte*/
     font-size: 54px;
+}
+
+/*Definir que todos H's receba uma cor e um estilo de fonte*/
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Abril Fatface', cursive;
     /*Usando a cor criada no :root*/
     color: var(--title-color);
 }

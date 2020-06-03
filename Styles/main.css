@@ -1,3 +1,9 @@
+/*zerar todos os espaçõs padrões que ja existe na nossa pagina*/
+/*vamos usar o asteristico que referencia a todos os seletores*/
+*{
+    margin: 0;
+    padding: 0;
+}
 /* BOX MODEL:
     Toda caixa tem : largura, altura, espaçamento, preenchimento, bordas, cor, fundo, maneira que é vista pelo html(display), alinhamento, posicionamento
 */
@@ -5,7 +11,7 @@
 :root{
     /*criamos essa variavel e agora é só replicar*/
     --title-color: #322153;
-
+    --primary-color: #34cb79;
 }
 html {
     /*Mudar as fontes da pagina toda*/
@@ -14,6 +20,8 @@ html {
 body{
     /*Mudar a cor do corpo da pagina*/
     background: #f0f0f5;
+    /*Deixa a letra com uma visão mais agradavel*/
+    -webkit-font-smoothing: antialiased;
 }
 a{
     /*Tirar o sublinhando dos links*/
@@ -35,6 +43,11 @@ a{
     max-width: 1100px;
     /*definindo a margin. podemos passar como paramentro o top, right, bottom e left*/
     margin: 0 auto;
+    /*definir a altura e algumas configurações para regular os posicionamento dos demais elementos*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
 }
 
 #page-home {
@@ -70,7 +83,12 @@ a{
 #page-home main {
     /*Definir uma largura maxima*/
     max-width: 560px;
-
+    /*Agora vamos fazer as configurações como continuação do que fizemos no page-home .content*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /*e justify-content: center; vai centralizar nossos elementos com nossas configurações*/
+    justify-content: center;
 }
 #page-home main h1 {
     /*Mudar a fonte*/
@@ -83,3 +101,94 @@ h1, h2, h3, h4, h5, h6{
     /*Usando a cor criada no :root*/
     color: var(--title-color);
 }
+#page-home main p {
+    /*Personalizar os textos em <p>*/
+    font-size: 24px;
+    /*altura da fonte*/
+    line-height: 38px;
+    /*uma margin para dar um espaço entre os dois texto*/
+    margin-top: 24px;
+}
+#page-home main a {
+    /*tamanho*/
+    width: 100%;
+    max-width: 360px;
+    /*altura*/
+    height: 72px;
+    /*arredondar as bordar do nosso botão*/
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    /*tempo que a cor definida no hover vai levar para a trocar*/
+    transition: 400ms;
+}
+/*configurações para quando nosso elemento esteja em modo hover(em ação ex: o botão for clicado)*/
+#page-home main a:hover{
+      background-color: #2fb86e;  
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+    /*Escurecer o botão qndo o mouse passar em cima, mas manter as duas cores*/
+    background-color: rgba(0,0,0,0.08);
+
+    /*tirar as sobras do quaddrado menor*/
+    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    /*criando o display como solicitado abaixo*/
+    display: flex;
+    /*e vamos centralizar a imagem com os dois comando abaixo*/
+    align-items: center;
+    justify-content: center;
+}
+/*pseu do elemento, vamos criar no css elemento que não existem dentro do html*/
+#page-home main a span::after{
+    /*vamos criar um espaço dentro desse nosso elemento*/
+    content: '';
+    /*adicionar uma imagem nele*/
+    background-image: url(../assets/search.svg);
+    /*que só vai aparecer se definir um tamanho*/
+    width: 20px;
+    height: 20px; 
+    /*e para finalizar vamos criar o display: flex no '#page-home main a span' para que aparece nossa imagem.*/
+}
+#page-home main a strong {
+
+    color: whitesmoke;
+    /*ocupar todo espaço de linha dentro da caixa*/
+    flex: 1;
+    /*centralizar o texto nessa linha*/
+    text-align: center;
+}
+
+/*Responsividade*/
+@media(max-width:900px){
+    /*menor que 900px nossa imagem vai sumir*/
+    #page-home {
+        background-position-x: 70vw;
+    }
+    /*e nosso texto vai centralizar*/
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+    /*e nosso cadastrar ponto de coleta, vai sair do top da pagina e ir la para baixo*/
+    #page-home header a {
+        /*tornando o elemento absoluto para mover ele*/
+        position: absolute;
+        /*mover para baixo*/
+        bottom: 48px;
+        /*colocar o elemento a 50% da pagina, ou seja no meio*/
+        left: 50%;
+        /*desconsiderar o tamanho do texto, para que fique no meio*/
+        transform: translateX(-50%);
+    }
+}
+/*centralizar o main*/
+#page-home main{
+    align-items: center;
+}
+

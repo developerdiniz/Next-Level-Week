@@ -3,6 +3,8 @@
 *{
     margin: 0;
     padding: 0;
+    /*definir que a bordar como tamanho maximo de largura*/
+    box-sizing: border-box;
 }
 /* BOX MODEL:
     Toda caixa tem : largura, altura, espaçamento, preenchimento, bordas, cor, fundo, maneira que é vista pelo html(display), alinhamento, posicionamento

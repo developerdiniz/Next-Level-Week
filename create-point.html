@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criando um ponto de coleta</title>
+        <link rel="stylesheet" href="/Styles/main.css">
+        <link rel="stylesheet" href="/Styles/create-point.css">
+        <link rel="stylesheet" href="/Styles/responsive.css">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <!-- Fontes : 
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;-->
+    </head>
+
+    <body>
+        <!--ID : o id é um elemento unico, não podemos ter dois id com o mesmo nome.-->
+        <div id="page-create-point">
+
+                <header>
+                    <!--src: caminho para a imagem, atl: alternativa caso não ache a imagem e/ou acessibilidade-->
+                    <img src="/assets/logo.svg" alt="Logomarca">
+                    <a href='#'>
+                        <span></span>
+                        Voltar para home</a>
+                </header>
+                <!--Criar o formulario-->
+                <form action="">
+                    <h1>Cadastro do ponto de coleta</h1>
+                    <!--fieldset(coleção de campos): vai juntar nossas duas caixas-->
+                    <fieldset>
+                        <legend>
+                            <h2>Dados da entidade</h2>
+                        </legend>
+
+                        <div class="field">
+                            <!--Criar um campo para entrada de dados.
+                            input = campo para inserir dados
+                            name = nome do campo
+                            for = referenciar o campo-->
+                            <label for="name">Nome da entidade</label>
+                            <input type="text" name="name">                     
+                        </div>  
+                        <div class="field-gruop">
+                            <div class="field">
+                                <label for="address">Endereço</label>
+                                <input type="text" name="address">
+                            </div>
+                            <div class="field">
+                                <label for="address2">Número/Complemento</label>
+                                <input type="text" name="address2">
+                            </div>
+                        </div> 
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="city">Cidade</label>
+                                <select name="city" id=""></select>
+                            </div>
+                            <div class="field">
+                                <label for="states">Estado</label>
+                                <select name="states" id=""></select>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            <h2>ítens de coleta</h2>
+                        </legend>
+
+                    </fieldset>
+                    <button type="submit">Cadastrar ponto de coleta</button>
+                </form>
+
+        </div>
+    </body>
+</html>

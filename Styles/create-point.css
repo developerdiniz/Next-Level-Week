@@ -1,0 +1,50 @@
+#page-create-point{
+    /*Largura normal*/
+    width: 90%;
+    /*se passar de 1100px, não aumenta mais a caixa*/
+    max-width: 1100px;
+    /*margim: cima e baixo =0 , laterais automatico*/
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    /*Colocar uma Margem em cima baixando os elemento que estão grudados no topo */
+    margin-top: 48px;
+    display: flex;
+    /*definir cada elemento em uma ponta*/
+    justify-content: space-between;
+    /*alinhar o "Voltar para home com o ecoleta baixando ele*/
+    align-items: center;
+}
+#page-create-point header a {
+    color: var(--title-color);
+    /*peso na fonte(negrito)*/
+    font-weight: bold;
+    /*alinhar o span e o texto*/
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span{
+    /*colocar uma margem para separar a seta do texto*/
+    margin-right: 12px;
+    /*caminho para uma imagem (seta)*/
+    background-image: url('../assets/arrow-left.svg');
+    /*para funcionar precisamos colocar o display, width , heigth*/
+    display: flex;
+    width: 20px;
+    height: 22px;
+}
+form {
+    background-color: palevioletred;
+    /*responsavel pelo preenchimento interno da nossa caixa*/
+    padding: 80px;
+    /*arredondamento das pontas*/
+    border-radius: 8px;
+    /*margin-top para dar uma margem e separar a caixa do ecoleta*/
+    margin-top: 80px;
+    /*Largura*/
+    max-width: 700px;
+    /*alinhamento de caixa pelo lado de fora*/
+    margin: 80px auto;
+}

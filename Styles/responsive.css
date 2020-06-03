@@ -1,0 +1,40 @@
+/*Responsividade*/
+@media(max-width:900px){
+    /*menor que 900px nossa imagem vai sumir*/
+    #page-home {
+        background-position-x: 70vw;
+    }
+    /*e nosso texto vai centralizar*/
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+    /*e nosso cadastrar ponto de coleta, vai sair do top da pagina e ir la para baixo*/
+    #page-home header a {
+        /*tornando o elemento absoluto para mover ele*/
+        position: absolute;
+        /*mover para baixo*/
+        bottom: 48px;
+        /*colocar o elemento a 50% da pagina, ou seja no meio*/
+        left: 50%;
+        /*desconsiderar o tamanho do texto, para que fique no meio*/
+        transform: translateX(-50%);
+    }
+    /*centralizar o main*/
+    #page-home main{
+        align-items: center;
+    }
+}
+
+@media(min-width: 1700px){
+    #page-home{
+        background-position-x: 40vw;
+    }
+}
+
+@media(max-height: 760px){
+    #page-home{
+        background-position-y: 200px;
+    }
+}
+

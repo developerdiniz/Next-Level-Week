@@ -48,3 +48,54 @@ form {
     /*alinhamento de caixa pelo lado de fora*/
     margin: 80px auto;
 }
+
+
+form h1 {
+    /*Tamanho da fonte*/
+    font-size: 36px;
+}
+
+form fieldset {
+    /*Margin-top para dar uma margem e separar a caixa de dados da entidade do titulo cadastro de ponto de coleta */
+    margin-top: 64px;
+    /*tirar a bordar padrão da caixa*/
+    border: 0;
+}
+
+form legend {
+    /*margin-bottom para separar os elementos*/
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field {
+    /*Para dividir e preencher todo o espaço */
+    flex: 1;
+    display: flex;
+    /*fazer os elementos ficar em coluna*/
+    flex-direction: column;
+    /*margin-bottom para separar os elementos*/
+    margin-bottom: 24px;
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input{
+    /*cor da caixa*/
+    background-color: #f0f0f5;
+    /*tirar a bordar da caixa*/
+    border: 0;
+    /*aumentar o espaçamento interno*/
+    padding: 16px 24px;
+    /*tamanho da fonte*/
+    font-size: 16px;
+    /*quando clica no campo para inserir dados, aparece uma bordar preta, vamos tirar com o outline*/
+    /*vamos comentar pois vamos deixar a linha preta*/
+    /*outline: none;*/
+
+}

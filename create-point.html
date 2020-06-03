@@ -42,7 +42,7 @@
                             <label for="name">Nome da entidade</label>
                             <input type="text" name="name">                     
                         </div>  
-                        <div class="field-gruop">
+                        <div class="field-group">
                             <div class="field">
                                 <label for="address">Endereço</label>
                                 <input type="text" name="address">
@@ -54,13 +54,17 @@
                         </div> 
                         <div class="field-group">
                             <div class="field">
-                                <label for="city">Cidade</label>
-                                <select name="city" id=""></select>
+                                <label for="states">Estado</label>
+                                <select name="uf">
+                                    <option value="">Selecione o estado</option>
+                                </select>
                             </div>
                             <div class="field">
-                                <label for="states">Estado</label>
-                                <select name="states" id=""></select>
-                            </div>
+                                <label for="city">Cidade</label>
+                                <select name="city" disabled>
+                                    <option value="">Selecione a Cidade</option> 
+                                </select>
+                            </div>  
                         </div>
 
 

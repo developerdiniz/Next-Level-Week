@@ -36,7 +36,7 @@
     height: 22px;
 }
 form {
-    background-color: palevioletred;
+    background-color: white;
     /*responsavel pelo preenchimento interno da nossa caixa*/
     padding: 80px;
     /*arredondamento das pontas*/
@@ -85,6 +85,7 @@ form .field-group {
     display: flex;
 }
 
+form select,
 form input{
     /*cor da caixa*/
     background-color: #f0f0f5;
@@ -98,4 +99,38 @@ form input{
     /*vamos comentar pois vamos deixar a linha preta*/
     /*outline: none;*/
 
+    /*arredondar as pontas da caixa*/
+    border-radius: 8px;
+}
+
+form label {
+    /*Tamanho da letra em cima da caixa do input*/
+    font-size: 14px;
+    /*Separar o texto do caixa*/
+    margin-bottom: 8px;
+}
+
+/*as caixas do input estão grudadas, vamos dar um espaço entre as caixas*/
+/*Esse caminho é para chegar na segunda caixa*/
+form .field-group .field + .field {
+    /*Vamos aplicar a margin no segundo campo para separa-los*/
+    margin-left: 24px;
+}
+form button{
+    /*Largura*/
+    width: 250px;
+    /*Altura*/
+    height: 56px;
+    /*Cor do botão*/
+    background-color: var(--primary-color);
+    /*Arredondamento*/
+    border-radius: 8px;
+    /*Tirar a borda*/
+    border: 0;
+    /*Cor da fonte*/
+    color: white;
+    /*Tamanho da fonte*/
+    font-size: 16px;
+    /*negrito*/
+    font-weight: bold;
 }

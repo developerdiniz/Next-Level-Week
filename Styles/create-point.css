@@ -133,4 +133,13 @@ form button{
     font-size: 16px;
     /*negrito*/
     font-weight: bold;
+    /*margem*/
+    margin-top: 40px;
+    /*Tempo que vai levar para o botão mudar de cor*/
+    transition: background-color 400ms;
+}
+/*hover: quando o mouse passa em cima do botão*/
+form button:hover{
+    /*mudar a cor do botão*/
+    background-color: #2fb86e;
 }

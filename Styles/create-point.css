@@ -85,8 +85,8 @@ form .field-group {
     display: flex;
 }
 
-form select,
-form input{
+form input,
+form select{
     /*cor da caixa*/
     background-color: #f0f0f5;
     /*tirar a bordar da caixa*/
@@ -101,6 +101,11 @@ form input{
 
     /*arredondar as pontas da caixa*/
     border-radius: 8px;
+}
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 form label {

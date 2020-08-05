@@ -28,7 +28,34 @@ h1 {
     /*color: black; /*04*/
 }
 
+html,
+body{/*13*/
+    height: 100vh;
+    /*height =  Altura*/
+}
+
 body {
     /*background-color: #8257E5;/*05*/
     background-color: var(--color-background);/*07*/
+    display: flex/*12* Deixar nosso conteudo flex para pode movimentar ele*/;
+    align-items: center /*12 Centralizar nosso conteudo */;
+    justify-content: center /*12 Centralizar nosso conteudo na horizontal*/;
+
+}
+
+body,
+input,
+button,
+textarea{/*15*/
+    /*font: 500 1.6rem Poppins; FORMA SIMPLIFICADA DE ESCREVER, MAS VAMOS ESCREVER UMA POR UMA PARA DECORAR E APRENDER SEPARADAMENTE /*15*/
+    font-weight: 500; /*15 o peso da fonte: mais fina ou mais grossa*/
+    font-family: Poppins;/*15 Tipo da fonte*/
+    font-size: 1.6rem;/*15 tamanho da fonte*/
+    color: var(--color-text-base);/*15*/
+}
+
+#container { /*16*/
+    width: 90vw; /*16*/
+    /*width = largura*/
+    max-width: 700px;/*16*/
 }
